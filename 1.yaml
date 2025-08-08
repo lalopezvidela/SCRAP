@@ -1,0 +1,219 @@
+```yaml
+openapi: 3.0.0
+info:
+  title: API de Extracción de Contenido de Artículo
+  description: |
+    API para obtener el contenido estructurado de un artículo de blog, incluyendo título, URL, encabezados, párrafos y tablas.
+    
+    Este documento OpenAPI describe la estructura de los datos que serían extraídos de un artículo web típico.
+  version: 1.0.0
+servers:
+  - url: https://api.thunderbit.com/v1
+    description: Servidor principal de la API de Thunderbit
+paths:
+  /article-content:
+    get:
+      summary: Obtener contenido estructurado de un artículo
+      operationId: getArticleContent
+      description: Recupera el contenido principal de un artículo de blog, como sus encabezados, párrafos y tablas. Este endpoint representa una salida hipotética de un proceso de web scraping.
+      parameters:
+        - in: query
+          name: url
+          schema:
+            type: string
+            format: url
+            description: La URL del artículo a procesar. (Este es un ejemplo, la API real podría requerir un proceso de scraping previo)
+          example: https://thunderbit.com/es/blog/guide-to-web-scraping-with-python
+          required: true
+      responses:
+        '200':
+          description: Contenido del artículo extraído exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleContent'
+              examples:
+                exampleArticleData:
+                  summary: Ejemplo de contenido extraído de un artículo
+                  value:
+                    url: "https://thunderbit.com/es/blog/guide-to-web-scraping-with-python"
+                    title: "Guía de Web Scraping con Python: Aprende con Ejemplos Prácticos"
+                    headings:
+                      - level: 1
+                        tag: "h1"
+                        text: "Guía de Web Scraping con Python: Aprende con Ejemplos Prácticos"
+                        attributes: {}
+                      - level: 2
+                        tag: "h2"
+                        text: "Por Qué el Web Scraping con Python es Clave para los Negocios Modernos"
+                        attributes:
+                          id: "por-qu-el-web-scraping-con-python-es-clave-para-los-negocios-modernos"
+                          style: "line-height:1.2;font-weight:600;margin:60px 0 20px"
+                    paragraphs:
+                      - text: "Hay algo que de verdad da gusto: ver cómo un script se pasea por una web y te junta toda la info que necesitas mientras tú te relajas con un café. Hace unos años, me acuerdo de pasarme horas copiando y pegando cientos de productos para un estudio de mercado; al final, el Ctrl+C y Ctrl+V ya no daban más. Hoy, gracias al web scraping python (y ahora a los raspadores web IA), ese maratón se volvió una carrera de 100 metros."
+                        attributes: {}
+                      - text: "Si trabajas en ventas, ecommerce, operaciones o simplemente ya te cansaste de meter datos a mano, seguro notaste que internet está lleno de información: contactos, precios, reseñas, anuncios de casas, y mucho más. No eres el único: el mercado de software de web scraping ya llegó a los, y se espera que se duplique para 2032. Python es el rey para esto, moviendo casi el. Pero ahora, con herramientas de Raspador Web IA como, hasta quienes no programan pueden sumarse a la fiesta de los datos. En esta guía te enseño cómo hacer web scraping python paso a paso, comparamos las librerías más usadas y verás cómo la IA está abriendo el acceso a los datos, sin tener que escribir ni una línea de código."
+                        attributes: {}
+                    tables:
+                      - attributes: {}
+                        headers:
+                          - "Caso de Uso Empresarial"
+                          - "Ejemplo de ROI / Beneficio"
+                        rows:
+                          - [ "Caso de Uso Empresarial", "Ejemplo de ROI / Beneficio" ]
+                          - [ "Generación de Leads (Ventas)", "Más de 3,000 leads/mes, ~8 horas/semana ahorradas por representante (fuente)" ]
+                          - [ "Monitoreo de Precios", "4% de aumento en ventas, 30% menos tiempo de análisis (fuente)" ]
+        '400':
+          description: URL no válida o parámetros faltantes.
+        '500':
+          description: Error interno del servidor al procesar la URL.
+
+components:
+  schemas:
+    ArticleContent:
+      type: object
+      description: Representación estructurada del contenido de un artículo web.
+      properties:
+        url:
+          type: string
+          format: url
+          description: La URL del artículo original de donde se extrajo el contenido.
+          example: "https://thunderbit.com/es/blog/guide-to-web-scraping-with-python"
+        title:
+          type: string
+          description: El título principal del artículo.
+          example: "Guía de Web Scraping con Python: Aprende con Ejemplos Prácticos"
+        headings:
+          type: array
+          description: Lista de todos los encabezados (h1, h2, h3, etc.) encontrados en el artículo, en orden de aparición.
+          items:
+            $ref: '#/components/schemas/Heading'
+          example:
+            - level: 1
+              tag: "h1"
+              text: "Guía de Web Scraping con Python: Aprende con Ejemplos Prácticos"
+              attributes: {}
+            - level: 2
+              tag: "h2"
+              text: "Por Qué el Web Scraping con Python es Clave para los Negocios Modernos"
+              attributes:
+                id: "por-qu-el-web-scraping-con-python-es-clave-para-los-negocios-modernos"
+                style: "line-height:1.2;font-weight:600;margin:60px 0 20px"
+        paragraphs:
+          type: array
+          description: Lista de todos los párrafos de texto encontrados en el artículo, en orden de aparición.
+          items:
+            $ref: '#/components/schemas/Paragraph'
+          example:
+            - text: "Hay algo que de verdad da gusto: ver cómo un script se pasea por una web y te junta toda la info que necesitas mientras tú te relajas con un café."
+              attributes: {}
+            - text: "Si trabajas en ventas, ecommerce, operaciones o simplemente ya te cansaste de meter datos a mano, seguro notaste que internet está lleno de información: contactos, precios, reseñas, anuncios de casas, y mucho más."
+              attributes: {}
+        tables:
+          type: array
+          description: Lista de todas las tablas HTML encontradas en el artículo, con sus encabezados y filas.
+          items:
+            $ref: '#/components/schemas/Table'
+          example:
+            - attributes: {}
+              headers:
+                - "Librería"
+                - "Ideal Para"
+                - "¿Soporta JavaScript?"
+                - "Dificultad de Aprendizaje"
+                - "Velocidad/Escala"
+              rows:
+                - [ "Librería", "Ideal Para", "¿Soporta JavaScript?", "Dificultad de Aprendizaje", "Velocidad/Escala" ]
+                - [ "Requests", "Obtener HTML", "No", "Fácil", "Bueno para tareas pequeñas" ]
+      required:
+        - url
+        - title
+        - headings
+        - paragraphs
+        - tables
+
+    Heading:
+      type: object
+      description: Representa un encabezado (e.g., h1, h2) con su texto y atributos.
+      properties:
+        level:
+          type: integer
+          description: El nivel del encabezado (ej. 1 para h1, 2 para h2).
+          minimum: 1
+          maximum: 6
+          example: 2
+        tag:
+          type: string
+          description: La etiqueta HTML del encabezado (ej. "h1", "h2").
+          pattern: "^h[1-6]$"
+          example: "h2"
+        text:
+          type: string
+          description: El texto visible del encabezado.
+          example: "Primeros Pasos: ¿Qué es el Web Scraping con Python?"
+        attributes:
+          type: object
+          description: Un objeto que contiene los atributos HTML del encabezado (ej. `id`, `style`).
+          additionalProperties:
+            type: string
+          example:
+            id: "primeros-pasos-qu-es-el-web-scraping-con-python"
+            style: "line-height:1.2;font-weight:600;margin:60px 0 20px"
+      required:
+        - level
+        - tag
+        - text
+        - attributes
+
+    Paragraph:
+      type: object
+      description: Representa un párrafo de texto con su contenido y atributos.
+      properties:
+        text:
+          type: string
+          description: El texto del párrafo.
+          example: "Hacerlo a mano es lento, te puedes equivocar y no escala. Los scripts de web scraping python te ahorran tiempo, evitan errores y te dejan extraer info de cientos o miles de páginas—adiós a las “olimpiadas del copiar y pegar” ()."
+        attributes:
+          type: object
+          description: Un objeto que contiene los atributos HTML del párrafo.
+          additionalProperties:
+            type: string
+          example: {}
+      required:
+        - text
+        - attributes
+
+    Table:
+      type: object
+      description: Representa una tabla HTML con sus encabezados y datos de fila.
+      properties:
+        attributes:
+          type: object
+          description: Un objeto que contiene los atributos HTML de la tabla.
+          additionalProperties:
+            type: string
+          example: {}
+        headers:
+          type: array
+          description: Una lista de cadenas que representan los encabezados de las columnas de la tabla.
+          items:
+            type: string
+          example:
+            - "Librería"
+            - "Ideal Para"
+            - "¿Soporta JavaScript?"
+        rows:
+          type: array
+          description: Una lista de filas de la tabla, donde cada fila es una lista de cadenas que representan los datos de las celdas.
+          items:
+            type: array
+            items:
+              type: string
+          example:
+            - [ "Requests", "Obtener HTML", "No" ]
+            - [ "BeautifulSoup", "Analizar HTML", "No" ]
+      required:
+        - attributes
+        - headers
+        - rows
+```

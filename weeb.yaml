@@ -1,0 +1,556 @@
+openapi: 3.0.0
+info:
+  title: API de Datos de Artículo
+  version: 1.0.0
+  description: API para recuperar datos estructurados de un artículo específico sobre Web Scraping automatizado.
+servers:
+  - url: https://api.example.com/v1
+    description: Servidor principal de la API
+paths:
+  /article-data:
+    get:
+      summary: Recuperar datos del artículo "Web Scraping automatizado"
+      description: Proporciona la URL, el título, los encabezados y los párrafos del artículo especificado.
+      operationId: getWebScrapingArticleData
+      responses:
+        '200':
+          description: Datos del artículo recuperados exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleData'
+              example:
+                url: "https://www.ipburger.com/es/blog/automated-web-scraping/"
+                title: "Web Scraping automatizado: Un cambio de juego para la extracción de datos"
+                headings:
+                  - level: 1
+                    tag: h1
+                    text: "Web Scraping automatizado: Un cambio de juego para la extracción de datos"
+                    attributes:
+                      class:
+                        - "elementor-heading-title"
+                        - "elementor-size-default"
+                  - level: 2
+                    tag: h2
+                    text: "La llegada del Web Scraping automatizado"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "0-the-advent-of-automated-web-scraping"
+                  - level: 2
+                    tag: h2
+                    text: "Las mejores herramientas para el Web Scraping automatizado"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "3-top-tools-for-automated-web-scraping"
+                  - level: 2
+                    tag: h2
+                    text: "Breve descripción de ChatGPT"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "4-brief-overview-of-chatgpt"
+                  - level: 2
+                    tag: h2
+                    text: "Cómo utilizar ChatGPT para automatizar el Web Scraping"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "5-how-to-use-chatgpt-to-automate-web-scraping"
+                  - level: 2
+                    tag: h2
+                    text: "¿Cómo transforma el raspado web automatizado la extracción de datos?"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "6-how-does-automated-web-scraping-transform-data-extraction"
+                  - level: 2
+                    tag: h2
+                    text: "Superar los retos del Web Scraping automatizado"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "9-overcoming-challenges-in-automated-web-scraping"
+                  - level: 2
+                    tag: h2
+                    text: "¿Por qué es esencial el uso de proxies residenciales para la automatización del Web Scraping?"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "10-why-is-the-use-of-residential-proxies-essential-for-web-scraping-automation"
+                  - level: 2
+                    tag: h2
+                    text: "Proxies residenciales de IPBurger para la automatización"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "13-ipburgers-residential-proxies-for-automation"
+                  - level: 3
+                    tag: h3
+                    text: "Comprender los fundamentos del Web Scraping"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "1-understanding-the-basics-of-web-scraping"
+                  - level: 3
+                    tag: h3
+                    text: "Evolución hacia la automatización del Web Scraping"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "2-evolution-towards-automation-in-web-scraping"
+                  - level: 3
+                    tag: h3
+                    text: "Mayor eficacia y rapidez"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "7-increased-efficiency-and-speed"
+                  - level: 3
+                    tag: h3
+                    text: "Mayor precisión y control de calidad"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "8-enhanced-accuracy-and-quality-control"
+                  - level: 3
+                    tag: h3
+                    text: "El papel de los proxies residenciales para eludir los bloqueos"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "11-the-role-of-residential-proxies-in-bypassing-blocks"
+                  - level: 3
+                    tag: h3
+                    text: "Garantizar el anonimato y la seguridad con proxies residenciales"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "12-ensuring-anonymity-and-security-with-residential-proxies"
+                  - level: 3
+                    tag: h3
+                    text: "Conclusión"
+                    attributes:
+                      class:
+                        - "wp-block-heading"
+                      id: "14-conclusion"
+                  - level: 3
+                    tag: h3
+                    text: "Profundice aún más en elWeb Scraping"
+                    attributes:
+                      class:
+                        - "elementor-heading-title"
+                        - "elementor-size-default"
+                  - level: 5
+                    tag: h5
+                    text: "The Best HydraProxy Alternative for Reliability, Speed & Transparency"
+                    attributes:
+                      class:
+                        - "elementor-post__title"
+                  - level: 5
+                    tag: h5
+                    text: "The Best Rayobyte Alternative for Ethical, Scalable and High-Performance Proxies"
+                    attributes:
+                      class:
+                        - "elementor-post__title"
+                  - level: 5
+                    tag: h5
+                    text: "The Best Storm Proxies Alternative: Faster, Safer & More Affordable Proxies"
+                    attributes:
+                      class:
+                        - "elementor-post__title"
+                paragraphs:
+                  - text: "100M+ Rotating Residential Proxies perfect for scraping and gathering data."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "REAL Static ISP Proxies. The highest quality Dedicated IPs in the market."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Private Dedicated IPs are exclusively yours and guaranteed clean."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Fresh Dedicated IPs are private dedicated IPs with first time usage."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "10M+ Rotating Mobile proxies with extremely high success rate."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Streamline data collection from any public website with just one API call."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Fácil de usar desde Chrome."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Utiliza nuestros proxies en Firefox."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Ver todas las sedes"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Compruebe su IP para verificar los posibles riesgos y fugas para su caso de uso."
+                    attributes:
+                      class:
+                        - "elementor-heading-title"
+                        - "elementor-size-default"
+                  - text: "100M+ Residential Proxies perfect for scraping and gathering data."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "79 $/mes"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "REAL Static ISP Proxies. The highest quality Dedicated IPs in the market."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "$1441/month"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "Private Dedicated IPs are exclusively yours and guaranteed clean."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "$458/month"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "10M+ Rotating Mobile proxies with extremely high success rate."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "99 $/mes"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "Fresh Dedicated IPs are private dedicated IPs with first time usage."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "$958/month"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "Streamline data collection from any public website with just one API call."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "59 $/mes"
+                    attributes:
+                      class:
+                        - "elementor-image-box-description"
+                  - text: "Planes con precio personalizado según sus necesidades."
+                    attributes:
+                      class:
+                        - "elementor-heading-title"
+                        - "elementor-size-default"
+                  - text: "Recogida de datos sin límites."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Optimización del gasto publicitario. Fraude cero."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Seguimiento de enlaces y páginas afiliadas."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "La zapatilla se suelta a toda velocidad."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Comparación de datos en tiempo real."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Monitorización de SERPs y contenidos localizados."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Gestione sus proxies como un profesional"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Para agencias de SEO de primera categoría"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Libera el poder de las redes sociales"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Automatización del lanzamiento de zapatillas"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Explore nuestras guías y manuales prácticos"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Explore nuestras guías y manuales prácticos"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Nuestro equipo de asistencia estará encantado de ayudarle"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Más información sobre IPBurger"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Descubra nuestros más de 194 países"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Conozca nuestros proxies y sus diferencias"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "¿Tienes dudas? Te cubrimos."
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Perspectivas sobre raspado y proxies"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Todo sobre los proxies residenciales"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Todo lo que debe saber sobre los proxies dedicados"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Los proxies frescos no tienen secretos"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Preguntas y respuestas sobre las VPN"
+                    attributes:
+                      class:
+                        - "elementor-icon-box-description"
+                  - text: "Web scraping. Puede parecer un término rebuscado, pero en realidad cambia las reglas del juego de la extracción de datos."
+                    attributes: {}
+                  - text: "Olvídese de pasar horas copiando y pegando manualmente información de sitios web. Con el web scraping automatizado, puedes extraer grandes cantidades de datos de forma rápida y eficaz."
+                    attributes: {}
+                  - text: "En este blog, nos sumergiremos en los fundamentos del web scraping y cómo ha evolucionado hasta convertirse en automatizado. También exploraremos algunas de las principales herramientas para el scraping web automatizado, incluyendo ChatGPT y la Python AutoScraper Library."
+                    attributes: {}
+                  - text: "But that’s not all! We’ll discuss the transformative power of automated web scraping, from increased efficiency and speed to enhanced accuracy and scalability. Plus, we’ll delve into why businesses need to useresidential proxiesfor web scraping automation and how IPBurger’s residential proxies can give you a competitive advantage."
+                    attributes: {}
+                  - text: "¡Prepárate para revolucionar tu juego de extracción de datos!"
+                    attributes: {}
+                  - text: "El raspado automatizado de páginas web cambia las reglas del juego de la extracción de datos. Revoluciona la forma en que las empresas recopilan datos de sitios web, ofreciendo una extracción más rápida y eficaz que los métodos manuales. Con funciones avanzadas como la programación y la limpieza de datos, las empresas pueden extraer fácilmente datos valiosos para el análisis. Sin embargo, no deben ignorarse las consideraciones legales y éticas."
+                    attributes: {}
+                  - text: "El web scraping es el proceso de extracción automática de datos de sitios web. Consiste en escribir código para raspar el contenido de un sitio web y recuperar información específica, como texto, imágenes y otros elementos de datos."
+                    attributes: {}
+                  - text: "Tradicionalmente, el web scraping era un proceso manual que requería navegar por los sitios web y copiar y pegar la información deseada. Sin embargo, con la llegada del web scraping automatizado, esta larga tarea se ha transformado en un proceso ágil y eficiente."
+                    attributes: {}
+                  - text: "El web scraping automatizado utiliza herramientas de software y scripts para automatizar la extracción de datos no estructurados. Los rastreadores web pueden navegar por sitios web, recopilar datos en un formato estructurado y almacenarlos para su análisis o procesamiento posterior."
+                    attributes: {}
+                  - text: "Al automatizar el proceso de web scraping, las empresas pueden ahorrar mucho tiempo y recursos, al tiempo que obtienen acceso a una gran cantidad de información valiosa."
+                    attributes: {}
+                  - text: "Atrás quedaron los días del web scraping manual, con todas sus molestias que requieren mucho tiempo y son propensos a errores. Gracias a la automatización, podemos extraer más datos en menos tiempo. Las herramientas automatizadas de web scraping manejan sin esfuerzo sitios web complejos e incluso navegan por varias páginas. Además, la programación del web scraping automatizado garantiza la recuperación de datos actualizados. La evolución hacia la automatización ha revolucionado verdaderamente los procesos de extracción y análisis de datos."
+                    attributes: {}
+                  - text: "¿Quiere extraer datos valiosos de sitios web? Echa un vistazo a las mejores herramientas para el scraping web automatizado:"
+                    attributes: {}
+                  - text: "BeautifulSoupes una biblioteca Python sencilla y flexible."
+                    attributes: {}
+                  - text: "Selenioes potente para el scraping de páginas web dinámicas con JavaScript."
+                    attributes: {}
+                  - text: "Scrapyes un marco completo para la recopilación eficaz de datos."
+                    attributes: {}
+                  - text: "Octoparsees una herramienta API fácil de usar que no requiere programación."
+                    attributes: {}
+                  - text: "ParseHubes una herramienta intuitiva con una interfaz de apuntar y hacer clic."
+                    attributes: {}
+                  - text: "Apifyes una plataforma con capacidades de raspado web y automatización."
+                    attributes: {}
+                  - text: "Pero ¿qué pasa conChatGPTy la IA? (Pensé que nunca lo preguntarías)."
+                    attributes: {}
+                  - text: "Hablemos de ChatGPT, el modelo lingüístico desarrollado por OpenAI. Es impresionante. Puedes utilizarlo para todo tipo de cosas, incluido el raspado automatizado de páginas web."
+                    attributes: {}
+                  - text: "Con ChatGPT, la extracción de datos de sitios web se convierte en un juego de niños. La mejor parte es que es especialmente bueno para la extracción de datos estructurados, por lo que es un cambio de juego en el raspado web automatizado."
+                    attributes: {}
+                  - text: "Utilizar ChatGPT para automatizar el web scraping es relativamente sencillo. Aquí tienes una guía paso a paso:"
+                    attributes: {}
+                  - text: "1. Instala las librerías necesarias:Comienza instalando las librerías Python necesarias, como requests y BeautifulSoup."
+                    attributes: {}
+                  - text: "2. Establezca una conexión:Establece una conexión con la página web que quieres scrapear. Puedes utilizar la librería `requests` para enviar peticiones HTTP y recuperar el contenido HTML de la página."
+                    attributes: {}
+                  - text: "3. Analiza el contenido HTML:Una vez que haya recuperado el contenido HTML, utilice BeautifulSoup o una biblioteca similar para analizarlo. Esto te permitirá navegar por la estructura HTML y localizar los datos que necesitas extraer."
+                    attributes: {}
+                  - text: "4. Identifique los datos que desea extraer:Analice la estructura de la página web e identifique los elementos de datos específicos que desea extraer. Puede tratarse de texto, imágenes, enlaces u otra información relevante."
+                    attributes: {}
+                  - text: "5. Escriba el código para extraer los datos:Utilizando el contenido HTML analizado, escriba código utilizando las capacidades de ChatGPT para extraer los elementos de datos deseados. Puedes aprovechar sus capacidades de procesamiento de lenguaje natural para entender e interactuar con el contenido de una manera similar a la humana."
+                    attributes: {}
+                  - text: "6. Manejar contenido dinámico:Si el sitio web que está raspando tiene contenido dinámico cargado mediante JavaScript, puede utilizar la generación de respuestas dinámicas de Chat GPT. Ajusta tu código para esperar a que el contenido dinámico se cargue antes de extraer los datos."
+                    attributes: {}
+                  - text: "7. Almacene los datos extraídos:Una vez extraídos los datos deseados, almacénelos en un formato adecuado, como un archivo CSV o una base de datos. Esto facilitará el posterior análisis y manipulación de los datos."
+                    attributes: {}
+                  - text: "8. Implementar la gestión de errores y la robustez:Cuando se automatiza el web scraping con ChatGPT, es crucial implementar mecanismos adecuados de gestión de errores. Esto incluye la gestión de casos en los que la estructura del sitio web cambia o cuando hay problemas de conectividad."
+                    attributes: {}
+                  - text: "9. Respeta las condiciones de servicio del sitio web:Revisa y entiende sus condiciones de servicio antes de hacer scraping de cualquier sitio web. Algunos sitios web pueden prohibir o restringir las actividades de scraping, por lo que es importante respetar sus normas y directrices."
+                    attributes: {}
+                  - text: "10. Automatice el proceso de scraping:Para que el scraping web sea eficiente y escalable, considere la posibilidad de automatizar todo el proceso. Puede programar el script de scraping a intervalos específicos o activarlo en función de determinados eventos. Esto le ahorrará tiempo y esfuerzo a la hora de realizar la tarea manualmente de forma repetida."
+                    attributes: {}
+                  - text: "11. Supervise y actualice su código:Los sitios web pueden cambiar su estructura o diseño con el tiempo, lo que puede romper su código de raspado. Es esencial supervisar y actualizar regularmente el código para asegurarse de que sigue siendo compatible con los cambios realizados en el sitio web."
+                    attributes: {}
+                  - text: "12. Limitar la velocidad:Cuando se raspan sitios web, es importante tener en cuenta las capacidades del servidor y no sobrecargarlo con demasiadas solicitudes. Implementar la limitación de velocidad en el código de scraping puede ayudar a evitar interrupciones o posibles bloqueos del sitio web."
+                    attributes: {}
+                  - text: "13. Manejar los desafíos CAPTCHA:Algunos sitios web pueden tener desafíos CAPTCHA para evitar el scraping automatizado. Si encuentra CAPTCHAs durante el proceso de raspado, puede integrar soluciones como servicios de resolución de CAPTCHA o algoritmos de aprendizaje automático para automatizar el proceso de resolución. Esto permitirá que su secuencia de comandos de raspado web evite los desafíos CAPTCHA y continúe con la extracción de datos sin problemas."
+                    attributes: {}
+                  - text: "14. Utilizar proxies:Para evitar los bloqueos de IP o las restricciones que imponen los sitios web, considera el uso de proxies en tu proceso de web scraping. Los proxies actúan como intermediarios entre su ordenador y el sitio web de destino, permitiéndole realizar peticiones desde múltiples direcciones IP. Al rotar por diferentes proxies, puede evitar que sus actividades de scraping sean detectadas o bloqueadas."
+                    attributes: {}
+                  - text: "El web scraping automatizado revoluciona la extracción de datos al eliminar los esfuerzos manuales y ahorrar tiempo. Al mismo tiempo, permite la extracción a gran escala de múltiples sitios web, garantizando la precisión y reduciendo los errores humanos. La extracción de datos en tiempo real y las actualizaciones periódicas ofrecen información actualizada a las empresas."
+                    attributes: {}
+                  - text: "El raspado automatizado de páginas web hace el trabajo en un santiamén, ahorrándole tiempo y esfuerzo. Es como tener un superhéroe a tu lado, que extrae rápidamente cantidades ingentes de datos. Con la automatización, puede decir adiós a los molestos errores e incoherencias. Además, un análisis de datos más rápido significa una toma de decisiones más rápida. La eficacia y la rapidez le convierten en un auténtico competidor en el mundo empresarial."
+                    attributes: {}
+                  - text: "El web scraping automatizado garantiza una extracción de datos precisa y sin fallos, eliminando los errores humanos y las incoherencias. Además, pueden aplicarse medidas de control de calidad para verificar la exactitud de los datos raspados. Esto permite extraer grandes volúmenes de datos con gran precisión y fiabilidad, proporcionando actualizaciones en tiempo real para mejorar la toma de decisiones y el análisis."
+                    attributes: {}
+                  - text: "¿Quiere extraer grandes cantidades de datos en poco tiempo? El web scraping automatizado, también conocido como data scraping, es su solución. Amplíe sus esfuerzos de extracción de datos sin esfuerzo y procese y analice los datos con mayor rapidez: se acabaron las extracciones manuales y los errores humanos. Con las herramientas escalables de web scraping, extraiga datos de múltiples fuentes simultáneamente. Prepárese para mejorar su juego de datos."
+                    attributes: {}
+                  - text: "Los sitios web dinámicos y el bloqueo de IP pueden ser un quebradero de cabeza para las herramientas automatizadas de raspado web. Enfrentarse a contenidos que cambian constantemente y superar medidas como los desafíos CAPTCHA requiere técnicas avanzadas."
+                    attributes: {}
+                  - text: "Además, los formatos y estructuras de datos incoherentes necesitan una limpieza y normalización adecuadas. La escalabilidad y la eficiencia son cruciales a medida que crecen los datos. Las consideraciones legales y éticas también son importantes en la extracción responsable de datos."
+                    attributes: {}
+                  - text: "Los proxies residenciales desempeñan un papel crucial en la automatización del web scraping. Imitan el comportamiento del usuario real, evitando el bloqueo y la detección de IP. Estos proxies proporcionan un mayor anonimato y seguridad, permitiendo a los web scrapers acceder a datos web públicos sin ser marcados como bots. Al rotar las direcciones IP, los proxies residenciales ayudan a evitar los límites de velocidad y garantizan un scraping ininterrumpido."
+                    attributes: {}
+                  - text: "Los proxies residenciales juegan al escondite con los bloqueos de IP. Rotan las direcciones IP, haciendo que los rascadores web parezcan usuarios normales."
+                    attributes: {}
+                  - text: "Al eludir la detección, estos proxies permiten a los web scrapers acceder a sitios web bloqueados y extraer datos sin levantar sospechas. Son el disfraz perfecto para recopilar datos valiosos sin que te descubran."
+                    attributes: {}
+                  - text: "Proxies residenciales, ¡los héroes anónimos del web scraping! Estas pequeñas e inteligentes herramientas proporcionan un manto de anonimato enmascarando tu dirección IP, manteniéndote de incógnito mientras extraes valiosos datos. No sólo eso, sino que también evitan los molestos bloqueos y prohibiciones de IP, garantizando sesiones de scraping ininterrumpidas."
+                    attributes: {}
+                  - text: "Con los proxies residenciales, serás como un astuto agente secreto: indetectable y siempre un paso por delante. Así que rota esos proxies y navega sin preocupaciones. Tu anonimato y tu seguridad están en buenas manos."
+                    attributes: {}
+                  - text: "Los proxies residenciales de IPBurger cambian las reglas del juego de la automatización. No más accesos bloqueados o prohibidos al extraer datos valiosos con sus proxies altamente anónimos. Integrarlos fácilmente en las herramientas existentes para web scraping, y obtener acceso a datos geográficamente restringidos."
+                    attributes: {}
+                  - text: "Ahorre tiempo y recursos automatizando conproxies residenciales de IPBurger¡!"
+                    attributes: {}
+                  - text: "El web scraping automatizado ha revolucionado la forma de extraer datos. Ha hecho que el proceso sea más rápido, más preciso y altamente escalable. Con herramientas como ChatGPT, Python AutoScraper Library y muchas otras, las empresas tienen ahora el poder de extraer datos valiosos con facilidad."
+                    attributes: {}
+                  - text: "Pero, ¿qué ocurre con los retos que plantea el raspado automatizado de páginas web? Pues bien, los proxies residenciales desempeñan un papel crucial a la hora de superar estos obstáculos. Ayudan a evitar bloqueos, garantizan el anonimato y mejoran la seguridad durante el scraping."
+                    attributes: {}
+                  - text: "So, how can businesses leverage automated web scraping for a competitive advantage? By utilizingIPBurger’s residential proxies, they can extract data efficiently and stay ahead of the competition."
+                    attributes: {}
+                  - text: "En conclusión, el web scraping automatizado cambia las reglas del juego de la extracción de datos. Agiliza el proceso, mejora la eficiencia y proporciona a las empresas una ventaja competitiva."
+                    attributes: {}
+                  - text: "Entonces, ¿por qué esperar? Adopte el scraping web automatizado y libere todo el potencial de la extracción de datos."
+                    attributes: {}
+                  - text: "Why More Users Are Looking for a HydraProxy Alternative At first glance, HydraProxy seems like a solid choice. It’s affordable.It offers rotating and static residential proxies.And it gives users flexibility with pay-as-you-go pricing. For casual users? That’s enough. But for data scrapers, sneaker coppers, SEO specialists, and automation users who"
+                    attributes: {}
+                  - text: "Why More Users Are Searching for a Rayobyte Alternative Rayobyte has earned its place as a respected proxy provider, offering datacenter, ISP, and residential proxies to businesses and individuals needing bulk IPs. With competitive pricing and a variety of proxy types, it’s been a go-to choice for many in web"
+                    attributes: {}
+                  - text: "Looking for a Storm Proxies Alternative? Storm Proxies sells the dream: simple, affordable proxies that “just work.” And for some users? It kind of delivers. Until it doesn’t. Because here’s the reality—if you’re pulling small data sets, running light scraping jobs, or dipping your toes into sneaker copping, Storm Proxies"
+                    attributes: {}
+                  - text: "Home»Proxy Guides, Tutorials & Tips – IPBurger Blog»Web Scraping»Automated Web Scraping: A Game-Changer for Data Extraction"
+                    attributes: {}
+                tables: []
+components:
+  schemas:
+    ArticleData:
+      type: object
+      description: Estructura de datos de un artículo web extraído.
+      properties:
+        url:
+          type: string
+          format: url
+          description: URL del artículo.
+          example: "https://www.ipburger.com/es/blog/automated-web-scraping/"
+        title:
+          type: string
+          description: Título del artículo.
+          example: "Web Scraping automatizado: Un cambio de juego para la extracción de datos"
+        headings:
+          type: array
+          description: Lista de encabezados (h1, h2, etc.) encontrados en el artículo.
+          items:
+            $ref: '#/components/schemas/Heading'
+        paragraphs:
+          type: array
+          description: Lista de párrafos de texto encontrados en el artículo.
+          items:
+            $ref: '#/components/schemas/Paragraph'
+        tables:
+          type: array
+          description: Lista de tablas encontradas en el artículo. Vacío si no hay tablas presentes.
+          items: {}
+      required:
+        - url
+        - title
+        - headings
+        - paragraphs
+        - tables
+    Heading:
+      type: object
+      description: Representa un encabezado (h1, h2, h3, etc.) del artículo.
+      properties:
+        level:
+          type: integer
+          description: Nivel del encabezado (ej. 1 para h1, 2 para h2).
+          minimum: 1
+          maximum: 6
+          example: 2
+        tag:
+          type: string
+          description: Etiqueta HTML del encabezado.
+          enum: [h1, h2, h3, h4, h5, h6]
+          example: "h2"
+        text:
+          type: string
+          description: Contenido de texto del encabezado.
+          example: "La llegada del Web Scraping automatizado"
+        attributes:
+          type: object
+          description: Atributos HTML del encabezado.
+          properties:
+            class:
+              type: array
+              items:
+                type: string
+              description: Clases CSS aplicadas al encabezado.
+              example: ["wp-block-heading"]
+            id:
+              type: string
+              description: ID HTML del encabezado.
+              example: "0-the-advent-of-automated-web-scraping"
+          additionalProperties: true
+      required:
+        - level
+        - tag
+        - text
+    Paragraph:
+      type: object
+      description: Representa un párrafo de texto del artículo.
+      properties:
+        text:
+          type: string
+          description: Contenido de texto del párrafo.
+          example: "El web scraping es el proceso de extracción automática de datos de sitios web."
+        attributes:
+          type: object
+          description: Atributos HTML del párrafo. Opcional.
+          properties:
+            class:
+              type: array
+              items:
+                type: string
+              description: Clases CSS aplicadas al párrafo.
+              example: ["elementor-icon-box-description"]
+          additionalProperties: true
+      required:
+        - text
